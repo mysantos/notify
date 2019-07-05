@@ -1,14 +1,38 @@
+body{
+    border-top-color: 2px solid green;
+    border-top-width: 30px;
+}
+
 nav{
-    background-color: green
+    display: flex;
+    justify-content: center;
+    background-image: url(notify/banner.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-top: 10px solid rgb(81, 245, 81);
 }
+
+nav img{
+    width: 314px;
+    height: 302px;
+}
+
 header{
-    background-color: blue
+    display: grid;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                        'header header header header'
+                        'aside aside aside aside'
+                        'section section section batata'
+                        'footer footer footer footer';
+    background-color: blue;
 }
+
 aside{
-    background-color: blueviolet
+    background-color: blueviolet;
 }
 section{
-    background-color: yellow
+    background-color: yellow;
 }
 footer{
     background-color: red;
