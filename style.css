@@ -1,39 +1,76 @@
 body{
-    border-top-color: 2px solid green;
-    border-top-width: 30px;
-}
-
-nav{
+    margin: 0;  
+  }
+  
+  h1{
+    margin: 0;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 36pt;
+    font-weight: 100;
+  }
+  
+  header{
+    background-image: url("images/banner.png");
+    background-size: cover;
+    border-top: 10px solid #2dcd70;
     display: flex;
-    justify-content: center;
-    background-image: url(notify/banner.png);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    height: 500px;
-    border-top: 10px solid rgb(81, 245, 81);
-}
-
-nav img{
-    width: 314px;
-    height: 302px;
-}
-
-header{
-    display: grid;
-    grid-template-areas: 'navbar navbar navbar navbar'
-                        'header header header header'
-                        'aside aside aside aside'
-                        'section section section batata'
-                        'footer footer footer footer';
+    height: 450px;
+    justify-content: space-around;
     background-color: blue;
-}
+  }
+  
+  header div:first-child{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+  }
+  
+  header div:last-child{
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  header div:last-child img{
+    width: 330px;
+  }
+  
+  p{
+    width: 370px;
+    font-size: 22px;
+    color: white;
+  }
+  
+  span{
+    color: #2dcd70;
+  }
+  
+  
 
-aside{
-    background-color: blueviolet;
-}
-section{
-    background-color: yellow;
-}
-footer{
-    background-color: red;
-}
+  
+  #divisaoDosIcones{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin: 0;
+  }
+  
+  #divisaoDosIcones img{
+    width: 20px;
+  }
+  
+  #divisaoDosIcones div{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #divisaoDosIcones div:hover{
+    background-color: #2dcd70;
+  }
