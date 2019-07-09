@@ -1,8 +1,214 @@
-body{
-    margin: 0;  
-  }
-  
-  h1{
+body {
+    display: grid;
+    grid-template-areas: 'header header header header' 
+    'section section section section' 
+    'aside aside aside aside' 
+    'footer footer footer footer';
+    grid-template-rows: 47vh 45vh 35vh 8vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+
+/* PARTE 2 (SERVICOS) */
+
+.servicos {
+    grid-area: section;
+    width: calc(100% - 60px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    padding: 30px;
+    }
+
+.sobre {
+    width: 280px;
+    height: auto;
+    position: relative;
+    top: 467px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre img {
+    background-color: #2CBF60;
+    padding: 20px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.sobre h2 {
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+.sobre p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    line-height: 20px;
+}
+
+
+/* PARTE 3 (VIDEO) */
+
+.playVideo {
+    grid-area: section;
+    position: absolute;
+    top: 800px;
+    background-color: #e2e2e2;
+    width: calc(100% - 80px);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.playVideo p {
+    width: 500px;
+    line-height: 25px;
+    color: #999;
+}
+
+.playVideo div:nth-child(1) {
+    width: 40%;
+}
+
+.playVideo input {
+    border-radius: 10px 0px 0px 10px;
+    width: 200px;
+    height: 20px;
+    border: none;
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+}
+
+.playVideo input::placeholder {
+    padding: 10px;
+    color: #999;
+}
+
+.playVideo input:nth-child(2) {
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+    width: 20%;
+    height: 40px;
+    margin-left: -5px;
+    border: none;
+    background-color: #2CBF60;
+    color: #fff;
+    font-size: 16px;
+}
+
+.playVideo h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+iframe {
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* RODAPÉ*/
+
+footer {
+    grid-area: footer;
+    background-color: yellow;
+    position: relative;
+    top: 800px;
+    background-color: lightgray;
+    margin-bottom: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul {
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    list-style-type: none;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 20px;
+    color: #777;
+}
+
+li:hover {
+    color: #2CBF60;
+}
+
+
+/* media querie  */
+@media (max-width: 768px) {
+    
+    .servicos {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
+    }
+    .sobre {
+        margin-bottom: 30px;
+    }
+    
+    .playVideo {
+        position: absolute;
+        top: 1250px;
+        display: flex;
+        height: 500px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .playVideo div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+    }
+    .playVideo input {
+        border-radius: 10px 10px 10px 10px;
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    .playVideo input:nth-child(2) {
+        border-radius: 10px 10px 10px 10px;
+        width: 30%;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+    
+    }
+    footer {
+        position: relative;
+        top: 1530px;
+        background-color: lightgray;
+        margin-bottom: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+h1{
     margin: 0;
     color: white;
     font-family: 'Pacifico', cursive;
@@ -11,20 +217,19 @@ body{
   }
   
   header{
-    background-image: url("images/banner.png");
+    background-image: url("image/banner.png");
     background-size: cover;
     border-top: 10px solid #2dcd70;
     display: flex;
     height: 450px;
     justify-content: space-around;
-    background-color: blue;
   }
   
   header div:first-child{
-    align-items: flex-start;
+    align-items: flex-start; /*HORIZONTAL */
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;  /*VERTICAL*/
   }
   
   header div:last-child{
@@ -47,7 +252,7 @@ body{
   }
   
   
-
+  /* ICONES */
   
   #divisaoDosIcones{
     display: flex;
